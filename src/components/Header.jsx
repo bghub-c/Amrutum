@@ -63,7 +63,7 @@ export default function Header() {
           Home
            </Link>
           <Link key={2} to="/FindDoctors" className={`p-1 tracking-wideestcum ${
-              location.pathname === "/FindDoctors" ? "text-accent1 boldy " : ""
+              location.pathname === "/FindDoctors" || location.pathname === "/docs/1" ? "text-accent1 boldy " : ""
             } mr-1 transition-all`}
           >
           Find Doctors

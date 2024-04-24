@@ -5,7 +5,7 @@ export default function DocProfile(){
     const { docId } =useParams();  // Can be used to make fetch request for aspecific doctor
     return(
         <section className="w-screen h-full flex justify-center">
-                <section id="mainconainer" className="w-4/5 h-full grid grid-cols-2 bg-accent1">
+                <section id="mainconainer" className="w-4/5 h-screen grid grid-cols-2">
                     <Banner docId={docId}/>
                     <div id="leftcont"><div id="About" className="">About</div>
                     <div id="Speciality" className="col-span-2">Speciality</div>
