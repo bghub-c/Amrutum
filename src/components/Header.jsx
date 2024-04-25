@@ -34,7 +34,7 @@ export default function Header() {
   ];
   const location = useLocation();
   return (
-    <header className="bg-bg2 w-screen sticky top-0 flex items-center">
+    <header className="bg-bg2 w-screen top-0 flex items-center">
       <div
         id="1stpart"
         className="w-3/4 flex items-center justify-center oswald"
