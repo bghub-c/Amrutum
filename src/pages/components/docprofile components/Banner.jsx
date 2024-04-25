@@ -25,7 +25,7 @@ export default function Banner({ docId }) {
   return (
     <span
       id="banner"
-      className="col-span-2 w-full h-[200px] flex  rounded-lg overflow-hidden "
+      className="col-span-2 w-full h-[200px] flex overflow-hidden "
     >
       <span className="relative w-full h-full bg-blue-400 overflow-hidden">
         <img src="/banner1.png" alt="" />
@@ -68,7 +68,7 @@ export default function Banner({ docId }) {
             </span>
             <span
               id="Link"
-              className="flex justify-center cursor-pointer items-center bg-accent1 text-lg text-white h-fit px-4 py-2 ml-20 rounded-md"
+              className="flex justify-center cursor-pointer items-center bg-accent1 text-lg text-white h-fit px-4 py-2 ml-40 rounded-md"
             >
               <Link to={`bookdoc/${docId}`}> Book an Appointment</Link>
               

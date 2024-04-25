@@ -17,7 +17,7 @@ export default function About() {
   return (
     <section
       id="About"
-      className="row-span-2 border rounded-lg overflow-hidden flex flex-col w-full h-full text-zinc-800"
+      className="row-span-2 border rounded-2xl overflow-hidden flex flex-col w-full h-full text-zinc-800"
     >
       <h1 className="w-full h-fit text-xl pl-6 py-2 bg-bg3 place-self-start">
         A Little About me

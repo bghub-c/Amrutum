@@ -2,6 +2,10 @@ import { useParams } from "react-router-dom";
 import Banner from "./components/docprofile components/Banner";
 import Speciality from "./components/docprofile components/Speciality";
 import About from "./components/docprofile components/About";
+import Concerns from "./components/docprofile components/Concerns";
+import Work from "./components/docprofile components/Work";
+import Reviews from "./components/docprofile components/Reviews";
+import Appointment from "./components/docprofile components/Appointment";
 
 export default function DocProfile() {
   const { docId } = useParams(); // Can be used to make fetch request for aspecific doctor
@@ -15,16 +19,12 @@ export default function DocProfile() {
         <div id="leftcont" className="flex flex-col gap-3 h-fit">
           <About />
           <Speciality />
-          <div id="Treatment" className="col-span-2">
-            Treatment
-          </div>
-          <div id="Experience">Experience</div>
-          <div id="Reviews">Reviews</div>
+          <Concerns/>
+          <Work/>
+          <Reviews/>
         </div>
-
-        <div id="Rightcont" className="row-span-2 bg-blue-300">
-          123
-        </div>
+        <div id="rightcont" className="bg-blue-400"> <Appointment/> </div>
+        
       </section>
     </section>
   );
