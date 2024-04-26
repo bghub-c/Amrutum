@@ -5,7 +5,7 @@ export default function Reviews() {
     {
       name: "Alicent Hightower",
       info: "Consulted for Skin care",
-      imgsrc: "/public/pfprev.png",
+      imgsrc: "/pfprev.png",
       stars: 5,
       date: "20 January 2023",
       msg:
@@ -14,7 +14,7 @@ export default function Reviews() {
     {
       name: "Alicent Hightower",
       info: "Consulted for Skin care",
-      imgsrc: "/public/pfprev.png",
+      imgsrc: "/pfprev.png",
       stars: 5,
       date: "20 January 2023",
       msg:
@@ -26,10 +26,10 @@ export default function Reviews() {
       id="review"
       className="border rounded-2xl overflow-hidden flex flex-col w-full h-fit text-zinc-800"
     >
-      <h1 className="w-full h-fit text-xl pl-6 py-2 bg-bg3 place-self-start">
+      <h1 className="w-full h-fit text-xl pl-6 py-2 bg-bg3 place-self-start nunito">
         Featured Reviews ({reviewcount})
       </h1>
-      <div className="flex flex-col gap-5 my-4 w-11/12 place-self-center text-sm">
+      <div className="flex flex-col gap-5 my-4 w-11/12 place-self-center text-sm nunito">
         {reviews.map((review, index) => {
           return (
             <div key={index} className="bg-zinc-100 rounded-xl px-5">

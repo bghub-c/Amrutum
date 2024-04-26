@@ -5,10 +5,10 @@ export default function Concerns() {
   
     return (
       <section id="Concerns" className="border rounded-2xl overflow-hidden flex flex-col w-full h-full text-zinc-800">
-        <h1 className="w-full h-fit text-xl pl-6 py-2 bg-bg3 place-self-start">
+        <h1 className="w-full h-fit text-xl pl-6 py-2 bg-bg3 place-self-start nunito">
           The Concerns I Treat
         </h1>
-        <div id="con" className="flex flex-wrap gap-3 my-5 ml-5 text-sm">
+        <div id="con" className="flex flex-wrap gap-3 my-5 ml-5 text-sm poppins">
           {concerns.map((concern, index) => (
             <>
               {index <= 5 ? (

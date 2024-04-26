@@ -5,6 +5,19 @@ body {
   overflow-x: hidden; /* Hide horizontal scrollbar */
   overflow-y: auto;
 }
+.interfont {
+  font-family: "Inter", sans-serif;
+  font-variation-settings:
+    "slnt" 0;
+}
+.poppins {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+.nunito{
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+}
 ::-webkit-scrollbar {
   width: 9px; 
 }

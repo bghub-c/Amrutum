@@ -14,11 +14,11 @@ export default function Work() {
   const workexp=7;
     return (
       <section id="Work" className="border rounded-2xl overflow-hidden flex flex-col w-full h-full text-zinc-800">
-        <h1 className="w-full h-fit text-xl pl-6 py-2 bg-bg3 place-self-start">
+        <h1 className="w-full h-fit text-xl pl-6 py-2 bg-bg3 place-self-start nunito">
           My Work Experience
         </h1>
-        <div id="contain" className="w-full h-full ml-4">
-        <h2 className="text-accent1 w-fit my-4 pb-5 font-semibold border-b text-sm">I HAVE BEEN IN PRACTICE FOR : {workexp}+ YEARS </h2>
+        <div id="contain" className="w-full h-full ml-4 poppins">
+        <h2 className="text-accent1 w-fit my-4 pb-5 font-semibold border-b text-sm ">I HAVE BEEN IN PRACTICE FOR : {workexp}+ YEARS </h2>
         {
             works.map((work, index)=>{
                 return(

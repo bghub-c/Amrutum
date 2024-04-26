@@ -19,11 +19,11 @@ export default function About() {
       id="About"
       className="row-span-2 border rounded-2xl overflow-hidden flex flex-col w-full h-full text-zinc-800"
     >
-      <h1 className="w-full h-fit text-xl pl-6 py-2 bg-bg3 place-self-start">
+      <h1 className="w-full h-fit text-xl pl-6 py-2 bg-bg3 place-self-start nunito">
         A Little About me
       </h1>
       <div className="w-full px-6 py-2">
-        <p>
+        <p className="poppins">
           Hello, I am Dr. Bruce Willis, a Gynaecologist at Sanjivni Hospital in
           Surat. I love to work with all my hospital staff and senior doctors.
           Completed my graduation in Gynaecologist Medicine from the <br />
