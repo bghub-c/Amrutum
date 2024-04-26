@@ -60,7 +60,7 @@ export default function Docard() {
                   className="h-[120px] w-[120px] rounded-full object-cover"
                   alt={doc.name}
                 />
-                <span className="absolute bottom-0 py- px-2 text-white rounded-full bg-gradient-to-b from-black to-black/50 flex items-center gap-1">{doc.stars} <Star className="h-full text-yellow-500" weight="fill"/></span>
+                <span className="absolute bottom-11 py- px-2 text-white rounded-full bg-gradient-to-b from-black to-black/50 flex items-center gap-1">{doc.stars} <Star className="h-full text-yellow-500" weight="fill"/></span>
               </div>
               <h1 className="mt-4 w-full tracking-widest  text-lg font-bold">
                 {doc.name}

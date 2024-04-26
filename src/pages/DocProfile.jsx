@@ -24,7 +24,7 @@ export default function DocProfile() {
           <Work/>
           <Reviews/>
         </div>
-        <div id="rightcont" className=""> <Appointment/> </div>
+        <div id="rightcont"> <Appointment/> </div>
         
       </section>
     </section>
