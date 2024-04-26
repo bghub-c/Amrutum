@@ -80,5 +80,5 @@ export default function Banner({ docId }) {
   );
 }
 Banner.propTypes = {
-  docId: PropTypes.number.isRequired,
+  docId: PropTypes.string.isRequired,
 };

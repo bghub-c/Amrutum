@@ -1,9 +1,10 @@
-import { Pill, GraduationCap, ChatText } from "@phosphor-icons/react";
+import { Pill, GraduationCap, ChatText, Star } from "@phosphor-icons/react";
 import { Link } from "react-router-dom";
 export default function Docard() {
   const docs = [
     {
       id: 1,
+      stars:4.5,
       name: "Dr. Prerna Narang",
       imgsrc: "/09217e175d69b8cfd3da49cb2a8a6437.png",
       rating: 4.5,
@@ -17,6 +18,7 @@ export default function Docard() {
     },
     {
       id: 2,
+      stars:4.5,
       name: "Dr. Prerna Narang",
       imgsrc: "/09217e175d69b8cfd3da49cb2a8a6437.png",
       rating: 4.5,
@@ -30,6 +32,7 @@ export default function Docard() {
     },
     {
       id: 3,
+      stars:4.5,
       name: "Dr. Prerna Narang",
       imgsrc: "/09217e175d69b8cfd3da49cb2a8a6437.png",
       rating: 4.5,
@@ -43,7 +46,7 @@ export default function Docard() {
     },
   ];
   return (
-    <section className="h-full w-screen flex justify-center">
+    <section className="h-full w-screen flex justify-center nunito">
       <div id="cards" className="w-9/12 h-full grid grid-cols-3 gap-6">
         {docs.map((doc, index) => (
           <div
@@ -57,8 +60,9 @@ export default function Docard() {
                   className="h-[120px] w-[120px] rounded-full object-cover"
                   alt={doc.name}
                 />
+                <span className="absolute bottom-0 py- px-2 text-white rounded-full bg-gradient-to-b from-black to-black/50 flex items-center gap-1">{doc.stars} <Star className="h-full text-yellow-500" weight="fill"/></span>
               </div>
-              <h1 className="mt-4 w-full tracking-widest  text-lg font-medium">
+              <h1 className="mt-4 w-full tracking-widest  text-lg font-bold">
                 {doc.name}
               </h1>
             </div>

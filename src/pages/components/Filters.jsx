@@ -28,7 +28,7 @@ export default function Filters() {
 
   return (
     <section className="w-screen ">
-      <div className="h-fit w-full border-b border-zinc-300 flex justify-center gap-8 py-1 mb-6">
+      <div className="h-fit w-full border-b border-zinc-300 font-normal flex justify-center gap-8 py-1 mb-6">
         <select
           className={selectclass}
           id="Expertise"
@@ -103,7 +103,7 @@ export default function Filters() {
           exit={{scale:0.5,opacity:0}}
           transition={{ease:"easeInOut", type:"spring", duration:0.2}}
             key={index}
-            className="bg-accent1lt text-zinc-900 flex items-center justify-center text-sm h-fit mx-2 px-4 py-1 pr-1 rounded-full"
+            className="bg-accent1lt text-zinc-900 flex items-center justify-center text-sm interfont h-fit mx-2 px-4 py-1 pr-1 rounded-full"
           >
             {value}
             <X

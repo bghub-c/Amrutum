@@ -16,7 +16,7 @@ export default function Concerns() {
                   {concern}
                 </span>
               ) : index === concerns.length - 1 ? (
-                <span key={index} className="bg-accent1lt text-accent1 p-1 px-2 rounded-full">
+                <span key={`${index}1`} className="bg-accent1lt text-accent1 p-1 px-2 rounded-full">
                   + {concerns.length - 6} more
                 </span>
               ) : null}

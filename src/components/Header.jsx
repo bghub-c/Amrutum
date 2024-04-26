@@ -34,14 +34,14 @@ export default function Header() {
   ];
   const location = useLocation();
   return (
-    <header className="bg-bg2 w-screen top-0 flex items-center">
+    <header className="bg-bg2 w-screen top-0 flex items-center nunito tracking-wider">
       <div
         id="1stpart"
         className="w-3/4 flex items-center justify-center oswald"
       >
         <a
           href="/"
-          className="w-3/4 pl-20 my-3 text-accent1 font-semibold tracking-zaydawide overflow-hidden "
+          className="w-3/4 pl-20 my-3 text-accent1 font-semibold tracking-widest overflow-hidden "
         >
           <m.h1
         variants={container}

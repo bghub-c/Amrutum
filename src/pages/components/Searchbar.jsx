@@ -1,10 +1,28 @@
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { ArrowRight,MapPin } from "@phosphor-icons/react";
-
+import { m } from "framer-motion";
 
 export default function Searchbar(){
-const circleclass="absolute bg-accent1 rounded-full w-[150px] h-[150px] opacity-20"
+const circleclass="absolute bg-accent1ltt rounded-full w-[150px] h-[150px] opacity-20"
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.95,
+      staggerChildren: 0.3
+    }
+  }
+};
+const item = {
+  hidden: { scale: 0, opacity: 0 },
+  visible: {
+    scale: 1,
+    opacity: 1
+  }
+}
   const {
     register,
     handleSubmit,
@@ -17,13 +35,14 @@ const circleclass="absolute bg-accent1 rounded-full w-[150px] h-[150px] opacity-
     console.log(errors);
   }, [errors]);
 return(
-    <section className="relative bg-accent1lt w-screen flex flex-col justify-center items-center overflow-hidden" > 
-    <div id="circles" className={`${circleclass} left-28 -top-20 `}></div>
-    <div id="circles" className={`${circleclass} left-64 -bottom-16 z-10`}></div>
-    <div id="circles" className={`${circleclass} right-28 -top-20`}></div>
-    <div id="circles" className={`${circleclass} right-52 -bottom-14 z-10 `}></div>
+    <m.section variants={container} initial="hidden" animate="visible"
+     className="relative bg-accent1lt w-screen flex flex-col justify-center items-center overflow-hidden" > 
+    <m.div variants={item} id="circles" className={`${circleclass} left-28 -top-20 `}></m.div>
+    <m.div variants={item} id="circles" className={`${circleclass}bg-black right-28 -top-20`}></m.div>
+    <m.div variants={item} id="circles" className={`${circleclass} left-64 -bottom-16 z-10`}></m.div>
+    <m.div variants={item} id="circles" className={`${circleclass} right-52 -bottom-14 z-10 `}></m.div>
         <div className="flex flex-col items-center my-9">
-        <h1 className="text-2xl tracking-widest mb-4 mfont font-bold">Find Expert Doctors For An In-Clinic Session Here</h1>
+        <h1 className="text-2xl tracking-widest mb-4 m-plus font-bold">Find Expert Doctors For An In-Clinic Session Here</h1>
         <form onSubmit={handleSubmit(onSubmit)} className=" flex gap-3  items-center">
           <span className=" flex rounded-md border border-gray-300 bg-white text-zinc-400 z-40">
           <MapPin className="text-accent1 my-2 mx-1" weight="fill" />
@@ -44,6 +63,6 @@ return(
           {...register("search", { required: true })}/> <button type="submit"> <ArrowRight className="h-full" weight="fill" /></button>   </span>
         
       </form></div>
-        </section>
+        </m.section>
 );
 }

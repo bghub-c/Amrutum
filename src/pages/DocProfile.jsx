@@ -8,6 +8,7 @@ import Reviews from "./components/docprofile components/Reviews";
 import Appointment from "./components/docprofile components/Appointment";
 
 export default function DocProfile() {
+  window.scrollTo(top)
   const { docId } = useParams(); // Can be used to make fetch request for aspecific doctor
   return (
     <section className="w-screen h-full flex justify-center">

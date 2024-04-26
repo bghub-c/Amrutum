@@ -4,7 +4,14 @@ import {
   ArrowCircleRight,
   ArrowCircleLeft,
 } from "@phosphor-icons/react";
+import { useState } from "react";
 export default function Appointment() {
+  const [retvalues, setretvalues] = useState({
+    mode: "",
+    dateslot: "",
+    timeslot: "",
+  });
+
   const appointments = {
     Inclinic: "45 Mins",
     Video: "45 Mins",
@@ -47,7 +54,6 @@ export default function Appointment() {
   return (
     <section className="w-full  pt-6 px-3 border border-zinc-200 rounded-2xl interfont">
       <div className=" border border-zinc-200 rounded-xl pl-8 p-2 flex justify-between font-semibold text-lg">
-        
         Appointment Fee
         <span className="text-accent1  mr-10">{`\u20B9`} 699.00 </span>
       </div>
@@ -62,23 +68,22 @@ export default function Appointment() {
           id="modebuttons"
           className="w-full flex gap-3 justify-center tracking-widest text-center"
         >
-          <button className="py-3 px-8 border border-zinc-300 rounded-xl focus:border-accent1 focus:bg-accent1lt transition-all group poppins">
+          <button
+            onClick={() => {
+              setretvalues({ ...retvalues, mode: "inclinic" });
+            }}
+            className={` ${
+              retvalues.mode == "inclinic"
+                ? "border-accent1 text-accent1 bg-accent1lt"
+                : "border-zinc-300"
+            } py-3 px-8 border  rounded-xl focus:border-accent1 focus:bg-accent1lt transition-all group poppins`}
+          >
             <h1 className="flex items-center justify-center gap-2 font-medium group-focus:text-accent1">
               In Clinic
               <CheckCircle
-                className="h-full group-focus:flex hidden  text-accent1"
-                weight="fill"
-              />
-            </h1>
-            <h2 className="text-zinc-400 text-sm font-light">
-              {appointments.Inclinic}
-            </h2>
-          </button>
-          <button className="py-3 px-8 border border-zinc-300 rounded-xl focus:border-accent1 focus:bg-accent1lt transition-all group poppins">
-            <h1 className="flex items-center justify-center gap-2 font-medium group-focus:text-accent1">
-              Video
-              <CheckCircle
-                className="h-full group-focus:flex hidden  text-accent1"
+                className={`"h-full group-focus:flex ${
+                  retvalues.mode == "inclinic" ? "" : "hidden"
+                }   text-accent1"`}
                 weight="fill"
               />
             </h1>
@@ -86,11 +91,46 @@ export default function Appointment() {
               {appointments.Video}
             </h2>
           </button>
-          <button className="py-3 px-8 border border-zinc-300 rounded-xl focus:border-accent1 focus:bg-accent1lt transition-all group poppins">
+
+          <button
+            onClick={() => {
+              setretvalues({ ...retvalues, mode: "video" });
+            }}
+            className={` ${
+              retvalues.mode == "video"
+                ? "border-accent1 text-accent1 bg-accent1lt"
+                : "border-zinc-300"
+            } py-3 px-8 border  rounded-xl focus:border-accent1 focus:bg-accent1lt transition-all group poppins`}
+          >
+            <h1 className="flex items-center justify-center gap-2 font-medium group-focus:text-accent1">
+              Video
+              <CheckCircle
+                className={`"h-full group-focus:flex ${
+                  retvalues.mode == "video" ? "" : "hidden"
+                }   text-accent1"`}
+                weight="fill"
+              />
+            </h1>
+            <h2 className="text-zinc-400 text-sm font-light">
+              {appointments.Video}
+            </h2>
+          </button>
+          <button
+            onClick={() => {
+              setretvalues({ ...retvalues, mode: "chat" });
+            }}
+            className={` ${
+              retvalues.mode == "chat"
+                ? "border-accent1 text-accent1 bg-accent1lt"
+                : "border-zinc-300"
+            } py-3 px-8 border  rounded-xl focus:border-accent1 focus:bg-accent1lt transition-all group poppins`}
+          >
             <h1 className="flex items-center justify-center gap-2 font-medium group-focus:text-accent1">
               Chat
               <CheckCircle
-                className="h-full group-focus:flex hidden  text-accent1"
+                className={`"h-full group-focus:flex ${
+                  retvalues.mode == "chat" ? "" : "hidden"
+                }   text-accent1"`}
                 weight="fill"
               />
             </h1>
@@ -123,12 +163,19 @@ export default function Appointment() {
               return (
                 <button
                   key={index}
-                  className=" p-3 border rounded-xl text-center group focus:bg-accent1lt focus:border-accent1"
+                  onClick={() => {
+                    setretvalues({ ...retvalues, dateslot: time.date });
+                  }}
+                  className={`p-3 border rounded-xl text-center group ${retvalues.dateslot===time.date?" border-accent1 bg-accent1lt":"" }`}
                 >
-                  <h1 className="group-focus:text-accent1 font-semibold text-zinc-900">
+                  <h1
+                    key={`${index}1`}
+                    className={`${retvalues.dateslot===time.date?" text-accent1":"text-black"} font-semibold `}
+                  >
                     {time.date}
                   </h1>
                   <h2
+                    key={`${index}2`}
                     className={`font-bold ${
                       time.easee === 1
                         ? "text-zinc-400"
@@ -156,15 +203,21 @@ export default function Appointment() {
                 key={index}
                 className="text-zinc-800  relative flex flex-row justify-stretch mt-14 mb-10 w-11/12"
               >
-                <div className="absolute left-0 -top-3 bg-white px-2 font-semibold ">
+                <div
+                  key={`${index}a`}
+                  className="absolute left-0 -top-3 bg-white px-2 font-semibold "
+                >
                   {clock.slot}
                 </div>
               </span>
-              <div className="flex flex-wrap gap-4 text-sm">
+              <div key={`${index}b`} className="flex flex-wrap gap-4 text-sm">
                 {clock.clockstime.map((time, timeIndex) => (
                   <button
-                    key={timeIndex}
-                    className="py-5 p-2 rounded-2xl border border-zinc-200 focus:bg-accent1 focus:text-white transition-all"
+                    key={`${timeIndex}c`}
+                    onClick={() => {
+                      setretvalues({ ...retvalues, timeslot: time });
+                    }}
+                    className={`py-4 p-3 rounded-2xl border border-zinc-200 ${retvalues.timeslot===time?"bg-accent1 text-white":""} transition-all`}
                   >
                     {time}
                   </button>
@@ -174,8 +227,16 @@ export default function Appointment() {
           );
         })}
       </div>
-      <div className="py-10 w-full">
-      <button href="/" className="w-full my-8 px-auto bg-accent1 text-white rounded-lg py-4">Make An Appointment</button>
+      <div className="pt-10 w-full">
+        <button
+          onClick={() => {
+            console.log(retvalues);
+            setretvalues({mode:"",dateslot:"",timeslot:""})
+          }}
+          className="w-full my-8 px-auto bg-accent1 text-white rounded-lg py-4"
+        >
+          Make An Appointment
+        </button>
       </div>
     </section>
   );
