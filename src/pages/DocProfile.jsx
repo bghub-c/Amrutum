@@ -16,7 +16,7 @@ export default function DocProfile() {
         className="w-11/12 h-full mt-10 grid gap-3 grid-cols-2"
       >
         <Banner docId={docId} />
-        <div id="leftcont" className="flex flex-col gap-3 h-fit">
+        <div id="leftcont" className="flex flex-col gap-5 h-fit">
           <About />
           <Speciality />
           <Concerns/>
