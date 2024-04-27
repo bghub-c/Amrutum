@@ -1,6 +1,6 @@
 # Internship Task Project
 
-Welcome to the internship task project! This repository contains the code and resources for the task assigned during the internship.
+This repo hosts all the necessary files and folders neede to view the task given to me.
 
 ## Task Description
 
