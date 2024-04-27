@@ -2,9 +2,6 @@
 
 This repo hosts all the necessary files and folders neede to view the task given to me.
 
-## Task Description
-
-The task is to [brief description of the task]. This task aims to [mention the goals or objectives of the task]. 
 
 ## Project Structure
 
