@@ -1,8 +1,17 @@
-# React + Vite
+# Internship Task Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the internship task project! This repository contains the code and resources for the task assigned during the internship.
 
-Currently, two official plugins are available:
+## Task Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The task is to [brief description of the task]. This task aims to [mention the goals or objectives of the task]. 
+
+## Project Structure
+
+- `src/`: This directory contains the source code for the task.
+- `public/`: Contains any necessary data files or resources required for the task.
+- `components/`: Contains components for pages.
+
+## Contact
+
+If you have any questions or need further assistance, feel free to contact MO\ohd Bilal at mahammadbilal.mail@gmail.com.
