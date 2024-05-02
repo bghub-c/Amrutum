@@ -11,4 +11,4 @@ This repo hosts all the necessary files and folders neede to view the task given
 
 ## Contact
 
-If you have any questions or need further assistance, feel free to contact Mohd Bilal at mohammadbilal.mail@gmail.com
+If you have any questions or need further assistance, feel free to contact me at mohammadbilal.mail@gmail.com
