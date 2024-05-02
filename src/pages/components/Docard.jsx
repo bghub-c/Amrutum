@@ -53,14 +53,14 @@ export default function Docard() {
             key={index}
             className="laptop:w-full h-full mx-5 group bg-bg2 rounded-2xl shadow-xl flex flex-col items-center justify-start"
           >
-            <div id="img-name" className=" flex flex-col items-center mt-9 ">
+            <div id="img-name" className="relative flex flex-col items-center mt-9 ">
               <div className=" rounded-full overflow-hidden w-[120px] h-[120px] flex items-center justify-center">
                 <img
                   src={doc.imgsrc}
                   className="h-[120px] w-[120px] rounded-full object-cover"
                   alt={doc.name}
                 />
-                <span className="absolute bottom-11 py- px-2 text-white rounded-full bg-gradient-to-b from-black to-black/50 flex items-center gap-1">{doc.stars} <Star className="h-full text-yellow-500" weight="fill"/></span>
+                <span className="absolute bottom-10 z-50 py- px-2 text-white rounded-full bg-gradient-to-b from-black to-black/50 flex items-center gap-1">{doc.stars} <Star className="h-full text-yellow-500" weight="fill"/></span>
               </div>
               <h1 className="mt-4 w-full tracking-widest  text-lg font-bold">
                 {doc.name}
