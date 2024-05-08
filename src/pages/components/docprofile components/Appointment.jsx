@@ -37,14 +37,7 @@ export default function Appointment() {
   const clocks = [
     {
       slot: "Morning",
-      clockstime: [
-        "09:00 AM",
-        "09:30 AM",
-        "10:00 AM",
-        "10:15 AM",
-        "10:45 AM",
-        "11:00 AM",
-      ],
+      clockstime: ["09:00 AM", "09:30 AM", "10:00 AM", "10:15 AM", "10:45 AM", "11:00 AM",],
     },
     {
       slot: "Evening",

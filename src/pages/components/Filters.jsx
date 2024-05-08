@@ -95,12 +95,13 @@ export default function Filters() {
           ))}
         </select>
       </div>
-      <div className="flex items-center justify-end pr-10 mb-6 w-full h-[50px]">
-        <AnimatePresence>{Object.entries(filters).map(([key, value], index) => (
+      <m.div layout  className="flex items-center justify-end pr-10 mb-6 w-full h-[50px]">
+        <AnimatePresence >{Object.entries(filters).map(([key, value], index) => (
           <m.span
-          initial={{scale:0.5,opacity:0}}
-          animate={{scale:1,opacity:1}}
-          exit={{scale:0.5,opacity:0}}
+          layout
+          initial={{x:10,opacity:0}}
+          animate={{x:0,opacity:1}}
+          exit={{x:10,opacity:0}}
           transition={{ease:"easeInOut", type:"spring", duration:0.2}}
             key={index}
             className="bg-accent1lt text-zinc-900 flex items-center justify-center text-sm interfont h-fit mx-2 px-4 py-1 pr-1 rounded-full"
@@ -113,7 +114,7 @@ export default function Filters() {
             />
           </m.span>
         ))}</AnimatePresence>
-      </div>
+      </m.div>
     </section>
   );
 }
